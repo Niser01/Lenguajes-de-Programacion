@@ -31,9 +31,12 @@ namespace MoonePenrose
             Matrix<double> mtmulinv = mtmult.Inverse();
             Matrix<double> InvMoorePenrose = mtmulinv*mt;
 
+           
+
             /*Here are displayed the for loops to print the arrays, one nested loop to print the original array A,
             and the second to print the result of the Moore-Penrose inverse. for this to work properly if you change the 
             Matirx size you also have to change the constraints of the loops.*/
+
 
             Console.WriteLine("This is the A Matrix:");
             Console.WriteLine();
@@ -48,9 +51,9 @@ namespace MoonePenrose
             Console.WriteLine();
             Console.WriteLine("This is the Moore-Penrose inverse Matrix:");
             Console.WriteLine();
-            for (int f = 0; f < a; f++)
+            for (int f = 0; f < b; f++)
             {
-                for (int c = 0; c < b; c++)
+                for (int c = 0; c < a; c++)
                 {
                     Console.Write(InvMoorePenrose[f, c] + " ");
                 }
